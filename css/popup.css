@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background: url("../img/bg.png") repeat 50% 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.block {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+#content {
+
+}
+
+#control {
+    position: relative;
+    text-align: right;
+}
+
+#control .label {
+    left: 10px;
+    top: 18px;
+    position: absolute;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+#contact-us .label, #rutracker-url .label {
+    margin-bottom: 15px;
+}
+
+#contact-us .item, #rutracker-url .item {
+    margin-top: 5px;
+}
+
+#contact-us .item a, #rutracker-url .item a {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}
+
+#contact-us .website img, #rutracker-url .website img {
+    width: 18px;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+

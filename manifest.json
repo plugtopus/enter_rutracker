@@ -1,0 +1,32 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "core/bg.static.js", "core/bg.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "img/19.png",
+         "38": "img/38.png"
+      },
+      "default_popup": "html/popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "core/cs.js" ],
+      "matches": [ "*://rutracker.org/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "ru",
+   "name": "__MSG_name__",
+   "description": "__MSG_desc__",
+   "icons": {
+      "128": "img/128.png",
+      "16": "img/16.png",
+      "48": "img/48.png"
+   },
+   "manifest_version": 2,
+   "permissions": [ "proxy", "activeTab", "browsingData", "*://rutracker.org/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2018.3.21.1",
+   "author": "Plugtopus Agency",
+   "homepage_url": "https://plugtopus.agency"
+}
