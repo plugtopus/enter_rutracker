@@ -7,11 +7,10 @@
  */
 
 (function($){
-	if(typeof($.fn.lc_switch) != 'undefined') {return false;} // prevent dmultiple scripts inits
+	if(typeof($.fn.lc_switch) != 'undefined') {return false;}
 	
 	$.fn.lc_switch = function(on_text, off_text) {
 
-		// destruct
 		$.fn.lcs_destroy = function() {
 			
 			$(this).each(function() {
@@ -24,8 +23,6 @@
 			return true;
 		};	
 
-		
-		// set to ON
 		$.fn.lcs_on = function() {
 			
 			$(this).each(function() {
@@ -51,9 +48,7 @@
 			
 			return true;
 		};	
-		
-		
-		// set to OFF
+
 		$.fn.lcs_off = function() {
 			
 			$(this).each(function() {
@@ -72,33 +67,24 @@
 			
 			return true;
 		};	
-		
-		
-		// construct
+
 		return this.each(function(){
-			
-			// check against double init
+
 			if( !$(this).parent().hasClass('lcs_wrap') ) {
-			
-				// default texts
+
 				var ckd_on_txt = (typeof(on_text) == 'undefined') ? 'ON' : on_text;
 				var ckd_off_txt = (typeof(off_text) == 'undefined') ? 'OFF' : off_text;
-			   
-			   // labels structure
+
 				var on_label = (ckd_on_txt) ? '<div class="lcs_label lcs_label_on">'+ ckd_on_txt +'</div>' : '';
 				var off_label = (ckd_off_txt) ? '<div class="lcs_label lcs_label_off">'+ ckd_off_txt +'</div>' : '';
-				
-				
-				// default states
+
 				var disabled 	= ($(this).is(':disabled')) ? true: false;
 				var active 		= ($(this).is(':checked')) ? true : false;
 				
 				var status_classes = '';
 				status_classes += (active) ? ' lcs_on' : ' lcs_off'; 
 				if(disabled) {status_classes += ' lcs_disabled';} 
-			   
-			   
-				// wrap and append
+
 				var structure = 
 				'<div class="lcs_switch '+status_classes+'">' +
 					'<div class="lcs_cursor"></div>' +
@@ -116,12 +102,9 @@
         });
 	};	
 	
-	
-	
-	// handlers
+
 	$(document).ready(function() {
-		
-		// on click
+
 		$(document).delegate('.lcs_switch:not(.lcs_disabled)', 'click tap', function(e) {
 
 			if( $(this).hasClass('lcs_on') ) {
@@ -132,9 +115,7 @@
 				$(this).lcs_on();	
 			}
 		});
-		
-		
-		// on checkbox status change
+
 		$(document).delegate('.lcs_wrap input', 'change', function() {
 
 			if( $(this).is(':checked') ) {

@@ -1,0 +1,14 @@
+﻿{
+   "desc": {
+      "message": "This extension provides access to the Rutracker.org website for Russian citizens"
+   },
+   "name": {
+      "message": "Enter Rutracker"
+   },
+   "shortname": {
+      "message": "Enter Rutracker"
+   },
+   "title": {
+      "message": "Enter Rutracker"
+   }
+}

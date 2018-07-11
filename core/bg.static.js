@@ -136,9 +136,9 @@ function hasActualNotifications() {
 
 function setProblemIcon() {
     chrome.browserAction.setBadgeText({
-        text: "!"
+        text: "+"
     }), chrome.browserAction.setBadgeBackgroundColor({
-        color: "orange"
+        color: "green"
     }), chrome.browserAction.setIcon({
         path: {
             19: "img/19.png",
